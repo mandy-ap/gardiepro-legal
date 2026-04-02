@@ -1,6 +1,6 @@
 # Politique de confidentialité de GardiePro
 
-Dernière mise à jour : mars 2025
+Dernière mise à jour : avril 2026
 
 GardiePro respecte votre vie privée. Cette politique explique quelles informations sont collectées et comment elles sont utilisées.
 
@@ -14,11 +14,17 @@ GardiePro ne possède aucun serveur de stockage de données personnelles et ne t
 
 ---
 
-## 2. Analyse des photos de factures
+## 2. Analyse des photos de factures (service tiers — Anthropic)
 
-Lorsque vous utilisez la fonction de numérisation de factures, la photo est transmise à un service d'intelligence artificielle tiers afin d'en extraire automatiquement les informations (montants, articles, date). Cette transmission est chiffrée et la photo n'est pas conservée par le service tiers après traitement.
+Lorsque vous utilisez la fonction de numérisation de factures, la photo est transmise à l'API Claude d'Anthropic (anthropic.com), un service d'intelligence artificielle, afin d'en extraire automatiquement les informations (montants, fournisseur, date). Cette transmission est chiffrée (HTTPS).
+
+Conformément à la politique d'Anthropic, les données soumises via l'API ne sont pas utilisées pour entraîner leurs modèles d'intelligence artificielle. Anthropic peut conserver les données transmises jusqu'à 30 jours à des fins de sécurité et de détection d'abus, après quoi elles sont supprimées.
+
+Dans le cadre de la Loi modernisant des dispositions législatives en matière de protection des renseignements personnels (Loi 25), Anthropic agit à titre de sous-traitant de GardiePro pour le traitement de ces données. La politique de confidentialité d'Anthropic est accessible à : anthropic.com/legal/privacy
 
 Cette fonctionnalité est optionnelle. Vous pouvez l'activer ou la désactiver à tout moment dans Paramètres → Analyse des factures. Si elle est désactivée, vous pouvez saisir les informations manuellement.
+
+GardiePro ne transmet jamais de photos d'enfants ni de renseignements personnels sur les enfants à des services tiers.
 
 ---
 
