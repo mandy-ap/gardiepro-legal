@@ -7,3 +7,4 @@ Application de gestion pour services de garde familiaux du Québec.
 - [Politique de confidentialité](privacy-policy.md)
 - [Conditions d'utilisation](terms-of-service.md)
 - [Support](support.md)
+- [Demande de suppression de compte](delete-account.md)
