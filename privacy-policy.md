@@ -2,50 +2,74 @@
 
 Dernière mise à jour : avril 2026
 
-GardiePro respecte votre vie privée. Cette politique explique quelles informations sont collectées et comment elles sont utilisées.
+GardiePro respecte votre vie privée. Cette politique explique quelles informations sont collectées, où elles sont stockées et comment elles sont utilisées.
 
 ---
 
-## 1. Données stockées localement
+## 1. Données stockées dans le nuage (Appwrite)
 
-Toutes vos données (profil du service de garde, fiches des enfants, contacts des parents, présences, dépenses, factures et photos de factures) sont enregistrées exclusivement sur votre appareil, dans une base de données locale chiffrée.
+GardiePro utilise Appwrite (appwrite.io) comme plateforme de stockage infonuagique. Vos données (profil du service de garde, dépenses, articles de dépenses, catégories et photos de factures) sont enregistrées sur les serveurs d'Appwrite situés à Toronto, Canada (région tor.cloud.appwrite.io).
 
-GardiePro ne possède aucun serveur de stockage de données personnelles et ne transmet aucune information à des tiers sans votre consentement explicite.
+Appwrite agit à titre de sous-traitant de GardiePro pour l'hébergement de vos données. Ces données sont chiffrées en transit (HTTPS) et au repos. Appwrite ne vend pas vos données et ne les utilise pas à des fins commerciales. La politique de confidentialité d'Appwrite est accessible à : appwrite.io/privacy
 
----
-
-## 2. Analyse des photos de factures (service tiers — Anthropic)
-
-Lorsque vous utilisez la fonction de numérisation de factures, la photo est transmise à l'API Claude d'Anthropic (anthropic.com), un service d'intelligence artificielle, afin d'en extraire automatiquement les informations (montants, fournisseur, date). Cette transmission est chiffrée (HTTPS).
-
-Conformément à la politique d'Anthropic, les données soumises via l'API ne sont pas utilisées pour entraîner leurs modèles d'intelligence artificielle. Anthropic peut conserver les données transmises jusqu'à 30 jours à des fins de sécurité et de détection d'abus, après quoi elles sont supprimées.
-
-Dans le cadre de la Loi modernisant des dispositions législatives en matière de protection des renseignements personnels (Loi 25), Anthropic agit à titre de sous-traitant de GardiePro pour le traitement de ces données. La politique de confidentialité d'Anthropic est accessible à : anthropic.com/legal/privacy
-
-Cette fonctionnalité est optionnelle. Vous pouvez l'activer ou la désactiver à tout moment dans Paramètres → Analyse des factures. Si elle est désactivée, vous pouvez saisir les informations manuellement.
-
-GardiePro ne transmet jamais de photos d'enfants ni de renseignements personnels sur les enfants à des services tiers.
+Les données suivantes sont également conservées localement sur votre appareil (base de données chiffrée) : règles de catégorisation apprises, préférences locales.
 
 ---
 
-## 3. Photos de factures
+## 2. Analyse des photos de factures (Anthropic / Cloudflare)
 
-Les photos prises ou importées dans l'application sont copiées dans le dossier de support de l'app sur votre appareil. Elles sont liées à vos dépenses et ne sont pas partagées en dehors de l'application.
+Lorsque vous utilisez la fonction de numérisation de factures, la photo est transmise via un serveur mandataire (proxy) hébergé sur Cloudflare Workers à l'API Claude d'Anthropic (anthropic.com), un service d'intelligence artificielle, afin d'en extraire automatiquement les informations (articles, montants, fournisseur, date). Cette transmission est chiffrée (HTTPS).
 
----
+Aucune photo d'enfant ni aucun renseignement personnel sur les enfants n'est jamais transmis à ces services.
 
-## 4. Aucune collecte de données analytiques
+Conformément à la politique d'Anthropic, les données soumises via l'API ne sont pas utilisées pour entraîner leurs modèles. Anthropic peut conserver les données transmises jusqu'à 30 jours à des fins de sécurité et de détection d'abus.
 
-GardiePro ne collecte aucune donnée analytique, aucun identifiant publicitaire et n'utilise aucun outil de suivi (traceur). Aucune information sur votre utilisation de l'application n'est envoyée à nos serveurs.
+Cette fonctionnalité est optionnelle et peut être désactivée dans Paramètres → Analyse des factures.
 
----
-
-## 5. Sauvegarde (iCloud / iTunes)
-
-Si la sauvegarde iCloud ou iTunes est activée sur votre appareil, les données de GardiePro peuvent être incluses dans ces sauvegardes selon les paramètres de votre appareil. Ces sauvegardes sont gérées entièrement par Apple et sont soumises à la politique de confidentialité d'Apple.
+Politiques applicables :
+- Anthropic : anthropic.com/legal/privacy
+- Cloudflare : cloudflare.com/privacypolicy/
 
 ---
 
-## 6. Contact
+## 3. Autocomplétion d'adresses et calcul de kilométrage (Google)
 
-Pour toute question relative à la confidentialité, vous pouvez nous contacter à l'adresse indiquée sur la page de l'application dans l'App Store.
+GardiePro utilise les services Google Maps Platform (Google LLC) pour deux fonctionnalités :
+
+- **Autocomplétion d'adresses** : lorsque vous saisissez l'adresse d'un fournisseur, le texte partiel est envoyé à l'API Places de Google afin de vous proposer des suggestions. Cette transmission est chiffrée (HTTPS).
+
+- **Calcul du kilométrage** : lorsque vous activez l'option « Calcul du km » sur une dépense, les coordonnées géographiques de votre garderie et du fournisseur sont envoyées à l'API Distance Matrix de Google afin de calculer la distance parcourue.
+
+Ces données sont traitées par Google conformément à sa politique de confidentialité accessible à : policies.google.com/privacy
+
+Ces fonctionnalités sont optionnelles. Vous pouvez ne pas saisir d'adresse et ne pas activer le calcul de km.
+
+---
+
+## 4. Photos de factures
+
+Les photos prises ou importées sont copiées dans le dossier de support de l'app sur votre appareil, puis téléversées sur les serveurs d'Appwrite (Toronto) liées à votre compte. Elles ne sont accessibles qu'à vous via votre compte GardiePro.
+
+---
+
+## 5. Authentification
+
+La gestion des comptes utilisateurs (création de compte, connexion, réinitialisation de mot de passe) est assurée par Appwrite. Votre adresse courriel et votre mot de passe (haché) sont stockés sur les serveurs d'Appwrite à Toronto.
+
+---
+
+## 6. Aucune collecte de données analytiques
+
+GardiePro ne collecte aucune donnée analytique, aucun identifiant publicitaire et n'utilise aucun outil de suivi (traceur). Aucune information sur votre comportement dans l'application n'est envoyée à des tiers à des fins publicitaires ou statistiques.
+
+---
+
+## 7. Sauvegarde (iCloud / iTunes)
+
+Si la sauvegarde iCloud ou iTunes est activée sur votre appareil, les données locales de GardiePro peuvent être incluses dans ces sauvegardes. Ces sauvegardes sont gérées entièrement par Apple et sont soumises à la politique de confidentialité d'Apple.
+
+---
+
+## 8. Vos droits (Loi 25)
+
+Conformément à la Loi modernisant des dispositions législatives en matière de protection des renseignements personnels (Loi 25), vous avez le droit d'accéder à vos données personnelles, de les corriger et de demander leur suppression. Pour exercer ces droits ou pour toute question relative à la confidentialité, contactez-nous à l'adresse indiquée sur la page de l'application dans l'App Store.
